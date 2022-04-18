@@ -20,7 +20,7 @@ export default function CatForm(props) {
             }
 
             //send to the API
-            axios.post('http://localhost:61463/api/categories/', catToCreate).then(() => {
+            axios.post('http://todoapi.ianmcclaflin.com/api/categories/', catToCreate).then(() => {
               props.setShowCreate(false)
               props.getCategories()
             })
@@ -32,7 +32,7 @@ export default function CatForm(props) {
           CategoryDescription: values.CategoryDescription
         }
 
-        axios.put('http://localhost:61463/api/categories/', catToEdit).then(() => {
+        axios.put('http://todoapi.ianmcclaflin.com/api/categories/', catToEdit).then(() => {
           props.getCategories();
           props.setShowEdit(false);
         })

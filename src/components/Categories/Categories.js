@@ -20,7 +20,7 @@ export default function Categories() {
     //Step 3 - CategoriesRead - Create the function (includes importing Axios)
     const getCategories = () => {
 
-        axios.get('http://localhost:61463/api/categories/').then(response => {
+        axios.get('http://todoapi.ianmcclaflin.com/api/categories/').then(response => {
             setCategories(response.data)
         })
 
